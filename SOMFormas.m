@@ -28,7 +28,7 @@ for i=1:IterMax
         [Gx,Gy]=CalculoGanadora(W,Patron);
         IndGan=[Gx,Gy]';
         
-        Vecindad=FuncionVecindad(IndGan,W,Indices);
+        Vecindad=FuncionVecindadConDistancia(IndGan,W,Indices);
         W=IncrementarPesos(W,Patron,Vecindad,eta);
 
     end

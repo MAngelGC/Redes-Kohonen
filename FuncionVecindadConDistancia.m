@@ -8,7 +8,7 @@ for i = 1:numFilas
             Vecindad(i, j) = 1;
         else
             if (sum(abs(IndGan - Indices(:, i, j)) == 1))
-                Vecindad(i, j) = exp(-norm(W(:, i, j) - Patron, 2));
+                Vecindad(i, j) = exp(-norm(W(:, i, j) - Indices(:, i, j), 2));
             end
         end
     end
